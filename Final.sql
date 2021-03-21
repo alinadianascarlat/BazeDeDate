@@ -407,6 +407,8 @@ achizitii.idComponenta = furnizori.IdFurnizor and
 furnizori.nume = 'STOICA';
 
 
+select * from angajati;
+
 
 
 
