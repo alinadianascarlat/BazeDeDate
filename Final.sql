@@ -382,7 +382,7 @@ select angajati.Nume,angajati.Prenume from
 angajati,vanzari,clienti
 WHERE
 clienti.idClient = vanzari.idClient and
-vanzari.idClient = angajati.idAngajat and
+vanzari.idAngajat = angajati.idAngajat and
 clienti.nume = 'ILIESCU';
 
 
@@ -390,14 +390,14 @@ clienti.nume = 'ILIESCU';
 select angajati.nume,angajati.prenume from
 angajati,sectii,dependenti
 WHERE
-sectii.idSectie = angajati.idAngajat and
-angajati.idAngajat = dependenti.idAngajat and
+sectii.idSectie = angajati.idSectie and
 sectii.nume = 'PRODUCTIE' and
+angajati.idAngajat = dependenti.idAngajat and
 dependenti.GradRudenie='fiu' and 
 dependenti.prenume = 'ION';
 
 
-select produse.denumire from
+select  distinct produse.denumire from
 produse,compozitii,componente,achizitii,furnizori,angajati
 WHERE
 produse.idProdus = compozitii.idProdus and
